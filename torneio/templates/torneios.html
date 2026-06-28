@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<h2>Torneios:</h2>
+
+<ul>
+{% for torneio in torneios %}
+    <li>Torneio: {{ torneio.nome }}
+        <ul>
+            <p>Provas:</p>
+            {% for prova in torneio.provas.all %}
+                <p>{{ prova.nome }}</p>
+            {% endfor %}
+            <p>Atletas:</p>
+            {% for atleta in torneio.atletas.all %}
+                <p><a href="{% url 'atleta_view' atleta.id %}">{{ atleta.nome }}</a></p>
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

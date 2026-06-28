@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h2>Utilizador: {{utilizador.nome}}</h2>
+
+        <p>Receitas favoritas:</p>
+        <ul>
+            {% for receita in utilizador.receitas_favoritas.all %}
+                <li>{{receita.nome}}</li>
+            {% endfor %}    
+        </ul>
+    </body>
+</html>

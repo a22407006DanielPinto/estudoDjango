@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<h2>{{estudante.nome}}</h2>
+
+<p>Cursos:</p>
+<ul>
+{% for curso in estudante.cursos.all %}
+    <li>{{curso.nome}}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
