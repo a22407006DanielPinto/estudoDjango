@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<h2>Consultas:</h2>
+
+<ul>
+    {% for consulta in consultas %}
+        <li>Consulta: {{consulta.animal.nome}} - {{consulta.data}}</li>
+        <p>Veterinário:</p>
+        <a href="{% url '/clinica/veterinario/{{veterinario.id}}' %}">{{consulta.veterinario.nome}}</a>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

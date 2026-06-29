@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h1>{{veterinario.nome}}</h1>
+<h2>Especialidade: {{veterinario.especialidade}}</h2>
+
+<h3>Consultas:</h3>
+<ul>
+    {% for consulta in veterniario.consultas.all %}
+        <li>{{consulta.animal.nome}} - {{consulta.data}}</li>
+    {% endfor %}   
+</ul>
+
+
+</body>
+</html>
