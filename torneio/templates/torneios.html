@@ -6,6 +6,8 @@
 <ul>
 {% for torneio in torneios %}
     <li>Torneio: {{ torneio.nome }}
+        <a href="/torneios/torneio/editar/{{torneio.id}}/">Editar</a>
+        <a href="/torneios/torneio/apagar/{{torneio.id}}/">Apagar</a>
         <ul>
             <p>Provas:</p>
             {% for prova in torneio.provas.all %}

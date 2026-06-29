@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h2>Apagar Curso</h2>
+
+<p>Tens a certeza que queres apagar o curso "{{curso.nome}}"?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Apagar</button>
+</form>
+
+<a href="/escola">Cancelar</a>
+
+</body>
+</html>

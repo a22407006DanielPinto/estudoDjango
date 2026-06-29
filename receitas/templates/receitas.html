@@ -4,6 +4,8 @@
         <ul>
             {% for receita in receitas %}
                 <li>Receita: {{receita.nome}}
+                    <a href="/receitas/receita/editar/{{receita.id}}/">Editar</a>
+                    <a href="/receitas/receita/apagar/{{receita.id}}/">Apagar</a>
                     <p>Criador: <a href="{% url 'utilizador_view' receita.criador.id %}">{{receita.criador.nome}}</a></p>
                         <p>Ingredientes:</p>
                         <ul>

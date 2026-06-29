@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h2>Apagar Receita</h2>
+
+<p>Tens a certeza que queres apagar a receita "{{receita.nome}}"?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Apagar</button>
+</form>
+
+<a href="/receitas/">Cancelar</a>
+
+</body>
+</html>

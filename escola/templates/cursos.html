@@ -6,6 +6,8 @@
 <ul>
 {% for curso in cursos %}
     <li>Cursos: {{curso.nome}}
+        <a href="/escola/curso/editar/{{ curso.id }}/">Editar</a>
+        <a href="/escola/curso/apagar/{{ curso.id }}/">Apagar</a>
         <p>Professor: {{curso.professor.nome}}</p>
         <p>Estudantes:</p>
         <ul>
