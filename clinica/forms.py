@@ -18,7 +18,7 @@ class ConsultaForm(forms.ModelForm):
 class AnimalForm(forms.ModelForm):
     class Meta:
         model = Animal
-        fileds=['nome','especie','dono']
+        fields=['nome','especie','dono']
         labels={
             'nome':'Nome do Animal',
             'especie':'Espécie do Animal',

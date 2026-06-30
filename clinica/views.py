@@ -45,7 +45,7 @@ def criar_animal_view(request):
     if request.method == 'POST' and form.is_valid():
         form.save()
         return redirect('animais_view')
-    return render(request, 'animais.html', {'form': form})
+    return render(request, 'criar_animal.html', {'form': form})
 
 def editar_animal_view(request, id):
     animal = get_object_or_404(Animal, id=id)
@@ -60,4 +60,4 @@ def apagar_animal_view(request, id):
     if request.method == 'POST':
         animal.delete()
         return redirect('animais_view')
-    return render(request, 'apagar_animal_view', {'animal': animal})
+    return render(request, 'apagar_animal.html', {'animal': animal})
