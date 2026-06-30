@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Clínica Veterinária</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="{% url 'consultas_view' %}">Consultas</a>
+            <a href="{% url 'especialidades_view' %}">Especialidades</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

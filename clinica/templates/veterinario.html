@@ -1,5 +1,5 @@
-<html>
-<body>
+{% extends 'layout.html' %}
+{% block content %}
 
 <h1>{{veterinario.nome}}</h1>
 <h2>Especialidade: {{veterinario.especialidade}}</h2>
@@ -11,6 +11,4 @@
     {% endfor %}   
 </ul>
 
-
-</body>
-</html>
+{% endblock %}

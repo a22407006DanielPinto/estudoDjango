@@ -1,5 +1,5 @@
-<html>
-<body>
+{% extends 'layout.html' %}
+{% block content %}
 
 {% for especialidade in especialidades %}
     <h2>{{especialidade.nome}}</h2>
@@ -9,5 +9,4 @@
             {% endfor %}
         </ul>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
