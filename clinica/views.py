@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Veterinario, Animal, Consulta
+from .models import Veterinario, Animal, Consulta, Especialidade
 from .forms import ConsultaForm
 
 def consultas_view(request):
@@ -31,3 +31,7 @@ def apagar_consulta_view(request, id):
 def veterinario_view(request, id):
     veterinario = get_object_or_404(Veterinario, id=id)
     return render(request, 'veterinario.html', {'veterinario': veterinario})
+
+def especialidades_view(request):
+    especialidades = Especialidade.objects.all()
+    return render(request, 'especialidades.html', {'especialidade': especialidade})

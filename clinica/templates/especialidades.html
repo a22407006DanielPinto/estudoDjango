@@ -1,0 +1,10 @@
+<html>
+<body>
+
+{% for especialidade in especialidades %}
+    <h2>{{especialidade.nome}}/h2>
+        <ul>
+            <li>{{especialidade.veterinarios.all}}</li>
+        </ul>
+</body>
+</html>

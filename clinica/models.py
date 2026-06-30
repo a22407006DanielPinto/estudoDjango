@@ -2,7 +2,6 @@ from django.db import models
 
 class Veterinario(models.Model):
     nome = models.CharField(max_length=100)
-    especialidade = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
@@ -20,3 +19,13 @@ class Consulta(models.Model):
     motivo = models.CharField(max_length=100)
     veterinario = models.ForeignKey(Veterinario, on_delete=models.CASCADE, related_name='consultas')
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE, related_name='consultas_animais')
+
+    def __str__(self):
+        return self.nome
+
+class Especialidade(models.Model):
+    nome = models.CharField(max_length=100)
+    veterinarios = models.ManyToManyField(Veterinario, related_name='veterinarios')
+
+    def __str__(self):
+        return self.nome
