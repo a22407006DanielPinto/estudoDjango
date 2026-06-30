@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<h2>Apagar Consulta</h2>
+
+<p>Tem a certeza que quer apagar a consulta "{{consulta.data}} - {{consulta.animal.nome}}"?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Apagar</button>
+</form>
+
+<a href="/clinica/">Cancelar</a>
+
+</body>
+</html>
