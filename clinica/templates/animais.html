@@ -1,0 +1,16 @@
+{% extends 'layout.html'}
+{% block content %}
+
+<h2>Animais:</h2>
+<a href="{% url 'criar_animal_view' %}">Adicionar Animal</a>
+
+<ul>
+    {% for animal in animais %}
+        <a href="{% url 'editar_animal_view' animal.id %}">Editar</a>
+        <a href="{% url 'apagar_animal_view' animal.id %}">Apagar</a>
+        <li>{{animal.nome}} - {{animal.especie}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+    

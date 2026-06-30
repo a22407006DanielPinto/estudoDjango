@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2>Apagar Animal</h2>
+
+<p>Tens a certeza que queres apagar o animal "{{animal.nome}}"?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Apagar</button>
+</form>
+
+<a href="{% url 'animais_view' %}">Cancelar</a>
+
+{% endblock %}
