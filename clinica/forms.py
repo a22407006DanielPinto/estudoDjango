@@ -1,5 +1,5 @@
 from django import forms
-from .models import Consulta
+from .models import Consulta, Animal
 
 class ConsultaForm(forms.ModelForm):
     class Meta:
@@ -13,4 +13,17 @@ class ConsultaForm(forms.ModelForm):
         }
         help_texts={
             'data':'Ex: 26/07/2026',
+        }
+
+class AnimalForm(forms.ModelForm):
+    class Meta:
+        model = Animal
+        fileds=['nome','especie','dono']
+        labels={
+            'nome':'Nome do Animal',
+            'especie':'Espécie do Animal',
+            'dono':'Nome do Dono',
+        }
+        help_texts={
+            'especie':'Ex: Gato',
         }
