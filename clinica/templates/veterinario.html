@@ -4,7 +4,7 @@
 <h1>{{veterinario.nome}}</h1>
 <h2>Especialidade:
     {% for especialidade in veterinario.especialidades.all %}
-        {{especialidade.nome}}{% if not forloop.last},{% endif %}
+        {{especialidade.nome}}{% if not forloop.last %},{% endif %}
     {% endfor %}
 </h2>
 
