@@ -19,4 +19,4 @@ class Consulta(models.Model):
     data = models.DateField()
     motivo = models.CharField(max_length=100)
     veterinario = models.ForeignKey(Veterinario, on_delete=models.CASCADE, related_name='consultas')
-    animal = models.ForeignKey(Veterinario, on_delete=models.CASCADE, related_name='consultas_animais')
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE, related_name='consultas_animais')
