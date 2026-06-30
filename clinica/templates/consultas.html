@@ -5,6 +5,8 @@
 
 <ul>
     {% for consulta in consultas %}
+        <a href="/clinica/consulta/editar/{{consulta.id}}/">Editar</a>
+        <a href="/clinica/consulta/apagar/{{consulta.id}}/">Apagar</a>
         <li>Consulta: {{consulta.animal.nome}} - {{consulta.data}}</li>
         <p>Veterinário:</p>
         <a href="{% url 'veterinario_view' consulta.veterinario.id %}">{{consulta.veterinario.nome}}</a>
