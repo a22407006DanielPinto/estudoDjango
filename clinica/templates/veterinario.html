@@ -6,7 +6,7 @@
 
 <h3>Consultas:</h3>
 <ul>
-    {% for consulta in veteriniario.consultas.all %}
+    {% for consulta in veterinario.consultas.all %}
         <li>{{consulta.animal.nome}} - {{consulta.data}}</li>
     {% endfor %}   
 </ul>

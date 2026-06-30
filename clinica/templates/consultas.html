@@ -7,7 +7,7 @@
     {% for consulta in consultas %}
         <li>Consulta: {{consulta.animal.nome}} - {{consulta.data}}</li>
         <p>Veterinário:</p>
-        <a href="{% url 'veterinario_view' consulta.veterinario.id %}"></a>
+        <a href="{% url 'veterinario_view' consulta.veterinario.id %}">{{consulta.veterinario.nome}}</a>
     {% endfor %}
 </ul>
 
