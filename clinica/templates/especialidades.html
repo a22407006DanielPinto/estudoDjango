@@ -4,7 +4,7 @@
 {% for especialidade in especialidades %}
     <h2>{{especialidade.nome}}</h2>
         <ul>
-            {% for veterinario in especialidade.veterinarios.all}
+            {% for veterinario in especialidade.veterinarios.all %}
                 <li>{{veterinario.nome}}</li>
             {% endfor %}
         </ul>

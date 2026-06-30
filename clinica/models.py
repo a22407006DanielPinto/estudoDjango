@@ -21,7 +21,7 @@ class Consulta(models.Model):
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE, related_name='consultas_animais')
 
     def __str__(self):
-        return {self.animal} - {self.data}
+        return self.animal
 
 class Especialidade(models.Model):
     nome = models.CharField(max_length=100)
