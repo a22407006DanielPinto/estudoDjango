@@ -24,7 +24,7 @@ def editar_consulta_view(request, id):
 def apagar_consulta_view(request, id):
     consulta = get_object_or_404(Consulta, id=id)
     if request.method == 'POST':
-        consulta.save()
+        consulta.delete()
         return redirect('consultas_view')
     return render(request, 'apagar_consulta.html', {'consulta': consulta})
 
