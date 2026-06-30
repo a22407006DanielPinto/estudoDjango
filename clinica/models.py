@@ -21,11 +21,11 @@ class Consulta(models.Model):
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE, related_name='consultas_animais')
 
     def __str__(self):
-        return self.nome
+        return {self.animal} - {self.data}
 
 class Especialidade(models.Model):
     nome = models.CharField(max_length=100)
-    veterinarios = models.ManyToManyField(Veterinario, related_name='veterinarios')
+    veterinarios = models.ManyToManyField(Veterinario, related_name='especialidades')
 
     def __str__(self):
         return self.nome

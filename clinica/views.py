@@ -34,4 +34,4 @@ def veterinario_view(request, id):
 
 def especialidades_view(request):
     especialidades = Especialidade.objects.all()
-    return render(request, 'especialidades.html', {'especialidade': especialidade})
+    return render(request, 'especialidades.html', {'especialidades': especialidades})

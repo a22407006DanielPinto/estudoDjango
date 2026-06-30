@@ -2,9 +2,12 @@
 <body>
 
 {% for especialidade in especialidades %}
-    <h2>{{especialidade.nome}}/h2>
+    <h2>{{especialidade.nome}}</h2>
         <ul>
-            <li>{{especialidade.veterinarios.all}}</li>
+            {% for veterinario in especialidade.veterinarios.all}
+                <li>{{veterinario.nome}}</li>
+            {% endfor %}
         </ul>
+{% endfor %}
 </body>
 </html>
