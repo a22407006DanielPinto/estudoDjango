@@ -4,9 +4,10 @@ from .models import Torneio, Prova
 class TorneioForm(forms.ModelForm):
     class Meta:
         model = Torneio
-        fields=['nome']
+        fields=['nome','descricao']
         labels={
             'nome':'Nome do Torneio',
+            'descricao':'Descrição do Torneio'
         }
         text_helps={
             'nome':'Ex: Campeonato Nacional'
