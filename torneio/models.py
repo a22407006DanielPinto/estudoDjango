@@ -19,3 +19,7 @@ class Atleta(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Categoria(models.Model):
+    nome = models.CharField(max_length=100)
+    atletas = models.ManyToManyField(Atleta, related_name='categorias')
