@@ -4,7 +4,7 @@
 <h2>Categorias</h2>
 
 {% for categoria in categorias %}
-    <p>{{categoria.nome}}</p>
+    <h3>{{categoria.nome}}</h3>
     <ul>
         {% for atleta in categoria.atletas.all %}
             <li>{{atleta.nome}}</li>

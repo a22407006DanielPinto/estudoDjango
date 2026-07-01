@@ -33,7 +33,7 @@ def atleta_view(request, id):
     return render(request, 'atleta.html', {'atleta': atleta})
 
 def categorias_view(request):
-    categorias = Categoria.objects.all()
+    categorias = Categoria.objects.all().order_by('nome')
     return render(request, 'categorias.html', {'categorias': categorias})
 
 
