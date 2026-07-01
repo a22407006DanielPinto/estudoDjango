@@ -1,12 +1,13 @@
-<html>
-    <body>
-        <h2>Atleta: {{atleta.nome}}</h2>
+{% extends 'layout.html' %}
+{% block content %}
 
-        <p>Torneios:</p>
-        <ul>
-            {% for torneio in atleta.torneios.all %}
-                 <li>{{torneio.nome}}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+<h2>Atleta: {{atleta.nome}}</h2>
+
+<p>Torneios:</p>
+    <ul>
+        {% for torneio in atleta.torneios.all %}
+            <li>{{torneio.nome}}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

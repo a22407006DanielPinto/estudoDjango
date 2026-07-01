@@ -1,5 +1,5 @@
-<html>
-<body>
+{% extends 'layout.html' %}
+{% block content %}
 
 <h2>Apagar Torneio</h2>
 <p> Tens a certeza que queres apagar o torneio "{{torneio.nome}}?"</body>p>
@@ -11,5 +11,4 @@
 
 <a href="/torneios/">Cancelar</a>
 
-</body>
-</html>
+{% endblock %}
