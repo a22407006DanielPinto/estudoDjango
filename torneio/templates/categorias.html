@@ -9,7 +9,7 @@
         {% for atleta in categoria.atletas.all %}
             <li>{{atleta.nome}} (
                 {% for categoria in atleta.categorias.all %}
-                    {{categoria.nome}}
+                    {{categoria.nome}}{% if not forloop.last %}, {% endif %}
                 {% endfor %})
             </li>
         {% endfor %}
