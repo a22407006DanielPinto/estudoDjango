@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<h2>Categorias</h2>
+
+{% for categoria in categorias %}
+    <p>{{categoria.nome}}</p>
+    <ul>
+        {% for atleta in categoria.atletas.all %}
+            <li>{{atleta.nome}}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</body>
+</html>

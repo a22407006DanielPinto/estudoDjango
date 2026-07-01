@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Torneio, Atleta
+from .models import Torneio, Atleta, Categoria
 from .forms import TorneioForm
 
 def torneios_view(request):
@@ -31,5 +31,9 @@ def apagar_torneio_view(request, id):
 def atleta_view(request, id):
     atleta = get_object_or_404(Atleta, id=id)
     return render(request, 'atleta.html', {'atleta': atleta})
+
+def categorias_view(request):
+    categorias = Categoria.objects.all()
+    return render(request, 'categorias.html', {'categorias': categorias})
 
 
