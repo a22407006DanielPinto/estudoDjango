@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<h2>Atleta: {{atleta.nome}} -
+<h2>Atleta: {{atleta.nome}} (
     {% for categoria in atleta.categorias.all %}
         {{categoria.nome}}{% if not forloop.last %},{% endif %}
-    {% endfor %}
+    {% endfor %})
 </h2>
 
 <h3>Torneios:</h3>

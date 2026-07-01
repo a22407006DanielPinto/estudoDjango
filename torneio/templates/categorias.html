@@ -7,7 +7,11 @@
     <h3>{{categoria.nome}}</h3>
     <ul>
         {% for atleta in categoria.atletas.all %}
-            <li>{{atleta.nome}}</li>
+            <li>{{atleta.nome}} (
+                {% for categoria in atleta.categorias.all %}
+                    {{categoria.nome}}
+                {% endfor %})
+            </li>
         {% endfor %}
     </ul>
 {% endfor %}
