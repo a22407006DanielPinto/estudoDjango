@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Torneio, Atleta, Categoria
-from .forms import TorneioForm
+from .models import Torneio, Atleta, Categoria, Prova
+from .forms import TorneioForm, ProvaForm
 
 def torneios_view(request):
     torneios = Torneio.objects.all()
@@ -35,5 +35,13 @@ def atleta_view(request, id):
 def categorias_view(request):
     categorias = Categoria.objects.all().order_by('nome')
     return render(request, 'categorias.html', {'categorias': categorias})
+
+def editar_prova_view(request, id):
+    prova = get_object_or_404(Prova,id=id)
+    form = ProvaForm(request.POST or None, instance=prova)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect('torneios_view')
+    return render(request, 'editar_prova.html', {'form': form})
 
 

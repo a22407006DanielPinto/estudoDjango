@@ -1,5 +1,5 @@
 from django import forms
-from .models import Torneio
+from .models import Torneio, Prova
 
 class TorneioForm(forms.ModelForm):
     class Meta:
@@ -10,4 +10,15 @@ class TorneioForm(forms.ModelForm):
         }
         text_helps={
             'nome':'Ex: Campeonato Nacional'
+        }
+
+class ProvaForm(forms.ModelForm):
+    class Meta:
+        model = Prova
+        fields=['nome']
+        labels={
+            'nome':'Nome da Prova',
+        }
+        text_helps={
+            'nome':'Ex: Triplo Salto'
         }

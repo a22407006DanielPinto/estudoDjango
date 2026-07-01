@@ -11,7 +11,9 @@
         <ul>
             <p>Provas:</p>
             {% for prova in torneio.provas.all %}
-                <p>{{ prova.nome }}</p>
+                <p>{{ prova.nome }}
+                    <a href="{% url 'editar_prova_view' prova.id %}">Editar</a>
+                </p>
             {% endfor %}
             <p>Atletas:</p>
             {% for atleta in torneio.atletas.all %}
